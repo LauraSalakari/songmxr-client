@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import logo from "./assets/songmxr-logo.png";
+import {withRouter, Switch, Route} from "react-router-dom";
+import Landing from './components/Landing';
+import TrackSearch from './components/TrackSearch';
+import GenreSearch from './components/GenreSearch';
+import ArtistSearch from './components/ArtistSearch';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <picture>
+        <img src={logo} />
+      </picture>
+      <Switch>
+        <Route exact path="/" component={Landing}/>
+        <Route exact path="/search/artists" component={ArtistSearch}/>
+        <Route exact path="/search/tracks" component={TrackSearch}/>
+        <Route exact path="/search/genres" component={GenreSearch}/>
+      </Switch>
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);
