@@ -9,7 +9,7 @@ import ArtistSearch from './components/ArtistSearch';
 function App() {
   return (
     <div className="App">
-      <picture>
+      <picture id="main-logo">
         <img src={logo} />
       </picture>
       <Switch>
