@@ -1,0 +1,24 @@
+.artist-search-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artish-search-input{
+    max-width: 500px;
+    Margin-bottom: 30px;
+}
+
+.artist-card{
+    border: 1px solid #2EAE55;
+    margin: 6px;
+    padding: 6px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 400px;
+}
+
+.artist-card-image{
+    width: 80px;
+}
